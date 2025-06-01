@@ -1,0 +1,17 @@
+# === Vue (Vite + Node.js) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# === Python (FastAPI) ===
+backend/__pycache__/
+backend/.env
+backend/venv/
+backend/.mypy_cache/
+
+# === 共通・OS・エディタ ===
+*.log
+.DS_Store
+.vscode/
+.idea/
+.env
