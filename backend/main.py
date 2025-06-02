@@ -13,6 +13,10 @@ app = FastAPI()
 class ChatRequest(BaseModel):
     message: str
 
+class ChatResponse(BaseModel):
+    response: str
+
+
 @app.post("/chat")
 async def chat(request: ChatRequest):
     try:
@@ -23,6 +27,7 @@ async def chat(request: ChatRequest):
             ]
         )
         reply = response.choices[0].message.content
-        return {"response": reply}
+        return ChatResponse(response=reply)
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
