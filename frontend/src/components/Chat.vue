@@ -44,9 +44,6 @@ const sendMessage = async () => {
 
 }
 </script>
-
-
-
 <style scoped>
 .chat-container {
   width: 600px;
